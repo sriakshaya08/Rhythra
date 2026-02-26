@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HerBloom Wellness App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>🌸 HerBloom</h2>
+    <button onclick="showSection('dashboard')">Dashboard</button>
+    <button onclick="showSection('habits')">Habits</button>
+    <button onclick="showSection('cycle')">Cycle Tracker</button>
+    <button onclick="showSection('affirm')">Affirmations</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="section">
+      <h1>Welcome Back ✨</h1>
+
+      <div class="card">🔥 Habit Streak: <span id="streak">0</span> days</div>
+      <div class="card">🌼 Wellness Score: 85%</div>
+      <div class="card">🩸 Cycle Phase: <span id="phase">--</span></div>
+    </div>
+
+    <!-- Habit Tracker -->
+    <div id="habits" class="section hidden">
+      <h1>Habit Tracker</h1>
+
+      <input id="habitInput" placeholder="Enter a habit">
+      <button onclick="addHabit()">Add</button>
+
+      <ul id="habitList"></ul>
+    </div>
+
+    <!-- Cycle Tracker -->
+    <div id="cycle" class="section hidden">
+      <h1>Period Tracker</h1>
+
+      <label>Last Period Date:</label>
+      <input type="date" id="lastDate">
+
+      <label>Cycle Length:</label>
+      <input type="number" id="cycleLength" value="28">
+
+      <button onclick="calculateCycle()">Predict</button>
+
+      <h3 id="result"></h3>
+    </div>
+
+    <!-- Affirmations -->
+    <div id="affirm" class="section hidden">
+      <h1>Daily Affirmation</h1>
+
+      <div class="affirmBox" id="affirmText">
+        Click below 🌸
+      </div>
+
+      <button onclick="generateAffirmation()">
+        Generate
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
