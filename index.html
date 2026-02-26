@@ -1,75 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>HerBloom Wellness App</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rhythra 2.0</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<div class="container">
+<div class="app">
 
   <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>🌸 HerBloom</h2>
-    <button onclick="showSection('dashboard')">Dashboard</button>
-    <button onclick="showSection('habits')">Habits</button>
-    <button onclick="showSection('cycle')">Cycle Tracker</button>
-    <button onclick="showSection('affirm')">Affirmations</button>
-  </div>
+  <aside class="sidebar">
+    <h2>🌿 Rhythra</h2>
+    <nav>
+      <button class="active">Dashboard</button>
+      <button>Habits</button>
+      <button>Mood</button>
+      <button>Rhythm</button>
+      <button>Productivity</button>
+    </nav>
+
+    <div class="toggle">
+      <label>🌙 Dark Mode</label>
+      <input type="checkbox" id="darkToggle">
+    </div>
+  </aside>
 
   <!-- Main Content -->
-  <div class="content">
+  <main class="main">
 
-    <!-- Dashboard -->
-    <div id="dashboard" class="section">
-      <h1>Welcome Back ✨</h1>
+    <header>
+      <h1>Rhythm Intelligence Dashboard</h1>
+      <p>Live in rhythm. Thrive in balance.</p>
+    </header>
 
-      <div class="card">🔥 Habit Streak: <span id="streak">0</span> days</div>
-      <div class="card">🌼 Wellness Score: 85%</div>
-      <div class="card">🩸 Cycle Phase: <span id="phase">--</span></div>
-    </div>
+    <section class="grid">
 
-    <!-- Habit Tracker -->
-    <div id="habits" class="section hidden">
-      <h1>Habit Tracker</h1>
-
-      <input id="habitInput" placeholder="Enter a habit">
-      <button onclick="addHabit()">Add</button>
-
-      <ul id="habitList"></ul>
-    </div>
-
-    <!-- Cycle Tracker -->
-    <div id="cycle" class="section hidden">
-      <h1>Period Tracker</h1>
-
-      <label>Last Period Date:</label>
-      <input type="date" id="lastDate">
-
-      <label>Cycle Length:</label>
-      <input type="number" id="cycleLength" value="28">
-
-      <button onclick="calculateCycle()">Predict</button>
-
-      <h3 id="result"></h3>
-    </div>
-
-    <!-- Affirmations -->
-    <div id="affirm" class="section hidden">
-      <h1>Daily Affirmation</h1>
-
-      <div class="affirmBox" id="affirmText">
-        Click below 🌸
+      <!-- Wellness Score -->
+      <div class="card">
+        <h3>Wellness Index</h3>
+        <div class="circle">
+          <span id="score">82%</span>
+        </div>
       </div>
 
-      <button onclick="generateAffirmation()">
-        Generate
-      </button>
-    </div>
+      <!-- Habit Streak -->
+      <div class="card">
+        <h3>Habit Streak</h3>
+        <p class="big">🔥 12 Days</p>
+      </div>
 
-  </div>
+      <!-- Rhythm Phase -->
+      <div class="card">
+        <h3>Current Rhythm Phase</h3>
+        <p class="big">🌸 Growth Phase</p>
+        <small>Best for creative tasks & learning.</small>
+      </div>
+
+      <!-- Mood Analytics -->
+      <div class="card large">
+        <h3>Mood Trend</h3>
+        <canvas id="moodChart"></canvas>
+      </div>
+
+    </section>
+
+  </main>
 </div>
 
 <script src="script.js"></script>
