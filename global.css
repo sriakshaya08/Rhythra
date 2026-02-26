@@ -1,0 +1,76 @@
+/* ===== RHYTHRA GLOBAL UI + 12 THEMES ===== */
+
+:root{
+ --bg: linear-gradient(135deg,#e0f2fe,#fce7f3,#dcfce7);
+ --card: rgba(255,255,255,0.35);
+ --text:#111;
+}
+
+body{
+ margin:0;
+ font-family:'Segoe UI',sans-serif;
+ background:var(--bg);
+ color:var(--text);
+ display:flex;
+ transition:.4s;
+}
+
+/* Sidebar */
+.sidebar{
+ width:240px;
+ height:100vh;
+ padding:20px;
+ background:rgba(255,255,255,.4);
+ backdrop-filter:blur(18px);
+}
+
+.sidebar a{
+ display:block;
+ padding:12px;
+ margin:8px 0;
+ border-radius:12px;
+ text-decoration:none;
+ color:var(--text);
+ background:rgba(255,255,255,.5);
+}
+
+/* Main */
+.main{
+ flex:1;
+ padding:30px;
+}
+
+/* Cards */
+.card{
+ background:var(--card);
+ backdrop-filter:blur(18px);
+ padding:20px;
+ border-radius:20px;
+ box-shadow:0 8px 30px rgba(0,0,0,.1);
+ transition:.3s;
+}
+
+.card:hover{ transform:translateY(-5px); }
+
+/* ===== THEMES ===== */
+
+/* Girl */
+body.blossom{--bg:linear-gradient(135deg,#fbcfe8,#f472b6);}
+body.lavender{--bg:linear-gradient(135deg,#ddd6fe,#c4b5fd);}
+body.peach{--bg:linear-gradient(135deg,#fed7aa,#fb7185);}
+body.rose{--bg:linear-gradient(135deg,#fda4af,#fbcfe8);}
+body.mint{--bg:linear-gradient(135deg,#bbf7d0,#a7f3d0);}
+
+/* Dark */
+body.dark{
+ --bg:linear-gradient(135deg,#020617,#0f172a);
+ --card:rgba(0,0,0,.4);
+ --text:white;
+}
+
+/* Boy */
+body.ocean{--bg:linear-gradient(135deg,#0ea5e9,#2563eb);}
+body.navy{--bg:linear-gradient(135deg,#1e3a8a,#0f172a);--text:white;}
+body.forest{--bg:linear-gradient(135deg,#065f46,#334155);--text:white;}
+body.grey{--bg:linear-gradient(135deg,#6b7280,#374151);--text:white;}
+body.indigo{--bg:linear-gradient(135deg,#4f46e5,#9333ea);--text:white;}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mood</title>
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/mood.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>🌿 Rhythra</h2>
+<a href="index.html">Health</a>
+<a href="habits.html">Habits</a>
+<a href="mood.html">Mood</a>
+<a href="rhythm.html">Rhythm</a>
+<a href="productivity.html">Productivity</a>
+</div>
+
+<div class="main">
+
+<h1>Mood Engine</h1>
+
+<div class="emojis">
+<span onclick="logMood(5)">😊</span>
+<span onclick="logMood(4)">🙂</span>
+<span onclick="logMood(3)">😐</span>
+<span onclick="logMood(2)">😟</span>
+<span onclick="logMood(1)">😢</span>
+</div>
+
+<canvas id="graph"></canvas>
+
+</div>
+
+<script src="js/mood.js"></script>
+<script src="js/global.js"></script>
+</body>
+</html>

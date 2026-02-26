@@ -1,76 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rhythra 2.0</title>
-<link rel="stylesheet" href="style.css">
+<title>Rhythra – Health Hub</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<div class="app">
+<div class="sidebar">
+<h2>🌿 Rhythra</h2>
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>🌿 Rhythra</h2>
-    <nav>
-      <button class="active">Dashboard</button>
-      <button>Habits</button>
-      <button>Mood</button>
-      <button>Rhythm</button>
-      <button>Productivity</button>
-    </nav>
+<a href="index.html">Health Hub</a>
+<a href="habits.html">Habits</a>
+<a href="mood.html">Mood</a>
+<a href="rhythm.html">Rhythm</a>
+<a href="productivity.html">Productivity</a>
 
-    <div class="toggle">
-      <label>🌙 Dark Mode</label>
-      <input type="checkbox" id="darkToggle">
-    </div>
-  </aside>
+<select onchange="setTheme(this.value)">
+<option value="">Default</option>
+<option value="blossom">Blossom</option>
+<option value="lavender">Lavender</option>
+<option value="peach">Peach</option>
+<option value="rose">Rose</option>
+<option value="mint">Mint</option>
+<option value="dark">Dark</option>
+<option value="ocean">Ocean</option>
+<option value="navy">Navy</option>
+<option value="forest">Forest</option>
+<option value="grey">Grey</option>
+<option value="indigo">Indigo</option>
+</select>
 
-  <!-- Main Content -->
-  <main class="main">
-
-    <header>
-      <h1>Rhythm Intelligence Dashboard</h1>
-      <p>Live in rhythm. Thrive in balance.</p>
-    </header>
-
-    <section class="grid">
-
-      <!-- Wellness Score -->
-      <div class="card">
-        <h3>Wellness Index</h3>
-        <div class="circle">
-          <span id="score">82%</span>
-        </div>
-      </div>
-
-      <!-- Habit Streak -->
-      <div class="card">
-        <h3>Habit Streak</h3>
-        <p class="big">🔥 12 Days</p>
-      </div>
-
-      <!-- Rhythm Phase -->
-      <div class="card">
-        <h3>Current Rhythm Phase</h3>
-        <p class="big">🌸 Growth Phase</p>
-        <small>Best for creative tasks & learning.</small>
-      </div>
-
-      <!-- Mood Analytics -->
-      <div class="card large">
-        <h3>Mood Trend</h3>
-        <canvas id="moodChart"></canvas>
-      </div>
-
-    </section>
-
-  </main>
 </div>
 
-<script src="script.js"></script>
+<div class="main">
+
+<h1>Health Intelligence Hub</h1>
+
+<div class="grid">
+
+<div class="card ring">Wellness 86%</div>
+<div class="card">🔥 Streak 18</div>
+<div class="card">🌿 Growth Phase</div>
+
+<div class="card full">
+<canvas id="moodChart"></canvas>
+</div>
+
+</div>
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/global.js"></script>
 </body>
 </html>
