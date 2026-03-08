@@ -1,0 +1,44 @@
+.ringWrap{
+position:relative;
+width:130px;
+height:130px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:auto;
+}
+
+.ring{
+width:130px;
+height:130px;
+transform:rotate(-90deg);
+}
+
+.ring circle{
+fill:none;
+stroke-width:10;
+stroke:#e5e7eb;
+}
+
+#ringFill{
+stroke:#22c55e;
+stroke-dasharray:314;
+stroke-dashoffset:314;
+transition:1s ease;
+}
+
+.ringWrap span{
+position:absolute;
+font-size:20px;
+font-weight:600;
+}
+
+/* 3D hover cards */
+
+.tilt{
+transition:.3s;
+}
+
+.tilt:hover{
+transform:translateY(-5px) scale(1.02);
+}

@@ -1,76 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rhythra 2.0</title>
-<link rel="stylesheet" href="style.css">
+<title>Rhythra Dashboard</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/themes.css">
+<link rel="stylesheet" href="css/responsive.css">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
-<div class="app">
+<div class="sidebar">
 
-  <!-- Sidebar -->
-  <aside class="sidebar">
-    <h2>🌿 Rhythra</h2>
-    <nav>
-      <button class="active">Dashboard</button>
-      <button>Habits</button>
-      <button>Mood</button>
-      <button>Rhythm</button>
-      <button>Productivity</button>
-    </nav>
+<h2>🌿 Rhythra</h2>
 
-    <div class="toggle">
-      <label>🌙 Dark Mode</label>
-      <input type="checkbox" id="darkToggle">
-    </div>
-  </aside>
+<a href="index.html">Dashboard</a>
+<a href="habits.html">Habits</a>
+<a href="mood.html">Mood</a>
+<a href="rhythm.html">Rhythm</a>
+<a href="productivity.html">Productivity</a>
 
-  <!-- Main Content -->
-  <main class="main">
+<h3>Themes</h3>
 
-    <header>
-      <h1>Rhythm Intelligence Dashboard</h1>
-      <p>Live in rhythm. Thrive in balance.</p>
-    </header>
+<select onchange="setTheme(this.value)">
+<option value="">Default</option>
+<option value="blossom">Blossom</option>
+<option value="lavender">Lavender</option>
+<option value="peach">Peach</option>
+<option value="rose">Rose</option>
+<option value="mint">Mint</option>
+<option value="dark">Dark</option>
+<option value="ocean">Ocean</option>
+<option value="navy">Navy</option>
+<option value="forest">Forest</option>
+<option value="grey">Grey</option>
+<option value="indigo">Indigo</option>
+</select>
 
-    <section class="grid">
-
-      <!-- Wellness Score -->
-      <div class="card">
-        <h3>Wellness Index</h3>
-        <div class="circle">
-          <span id="score">82%</span>
-        </div>
-      </div>
-
-      <!-- Habit Streak -->
-      <div class="card">
-        <h3>Habit Streak</h3>
-        <p class="big">🔥 12 Days</p>
-      </div>
-
-      <!-- Rhythm Phase -->
-      <div class="card">
-        <h3>Current Rhythm Phase</h3>
-        <p class="big">🌸 Growth Phase</p>
-        <small>Best for creative tasks & learning.</small>
-      </div>
-
-      <!-- Mood Analytics -->
-      <div class="card large">
-        <h3>Mood Trend</h3>
-        <canvas id="moodChart"></canvas>
-      </div>
-
-    </section>
-
-  </main>
 </div>
 
-<script src="script.js"></script>
+
+<div class="main">
+
+<h1>Hello <span id="user"></span></h1>
+
+<div class="grid">
+
+<div class="card tilt">
+<h3>Wellness Score</h3>
+<div class="ringWrap">
+<svg class="ring">
+<circle cx="65" cy="65" r="50"/>
+<circle cx="65" cy="65" r="50" id="ringFill"/>
+</svg>
+<span id="score"></span>
+</div>
+</div>
+
+<div class="card tilt">
+<h3>Energy Prediction</h3>
+<h2 id="energy"></h2>
+</div>
+
+<div class="card tilt">
+<h3>Level</h3>
+<h2 id="level"></h2>
+</div>
+
+<div class="card tilt">
+<h3>AI Insight</h3>
+<p id="insight"></p>
+</div>
+
+</div>
+
+</div>
+
+
+<div id="chatbot">
+
+<div id="chatLog"></div>
+
+<input id="chatInput" placeholder="Ask Rhythra AI">
+
+</div>
+
+<script src="js/global.js"></script>
+<script src="js/wellness.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/gamification.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/chatbot.js"></script>
+
 </body>
 </html>

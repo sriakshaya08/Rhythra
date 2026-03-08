@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rhythra Mood</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/mood.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Rhythra</h2>
+
+<a href="index.html">Dashboard</a>
+<a href="habits.html">Habits</a>
+<a href="mood.html">Mood</a>
+<a href="rhythm.html">Rhythm</a>
+<a href="productivity.html">Productivity</a>
+
+</div>
+
+<div class="main">
+
+<h1>Mood Logger</h1>
+
+<div class="emojiGrid">
+
+<span onclick="logMood(5)">😊</span>
+<span onclick="logMood(4)">🙂</span>
+<span onclick="logMood(3)">😐</span>
+<span onclick="logMood(2)">😟</span>
+<span onclick="logMood(1)">😢</span>
+
+</div>
+
+<canvas id="moodChart"></canvas>
+
+</div>
+
+<script src="js/global.js"></script>
+<script src="js/mood.js"></script>
+
+</body>
+</html>

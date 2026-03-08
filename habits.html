@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rhythra Habits</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/habits.css">
+<link rel="stylesheet" href="css/themes.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>Rhythra</h2>
+
+<a href="index.html">Dashboard</a>
+<a href="habits.html">Habits</a>
+<a href="mood.html">Mood</a>
+<a href="rhythm.html">Rhythm</a>
+<a href="productivity.html">Productivity</a>
+
+</div>
+
+<div class="main">
+
+<h1>Habit Tracker</h1>
+
+<input id="habitInput" placeholder="New Habit">
+
+<button onclick="addHabit()">Add Habit</button>
+
+<div id="habitList"></div>
+
+<h2>Consistency</h2>
+
+<div id="heatmap" class="heatmap"></div>
+
+</div>
+
+<script src="js/global.js"></script>
+<script src="js/habits.js"></script>
+<script src="js/heatmap.js"></script>
+<script src="js/animations.js"></script>
+
+</body>
+</html>
